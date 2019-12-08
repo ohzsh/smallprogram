@@ -1,0 +1,149 @@
+  
+/* .bird_bg {
+    background: url('../images/snack/geometry.png');
+    height: 100vh;
+  } */
+  
+  .sidebar_h3 {
+    text-align: center;
+  }
+  
+  .noScroll {
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .spaceTip {
+    font-size: 30px;
+    padding-top: 20px;
+    text-align: center;
+  }
+  
+  @keyframes birdBgMove {
+    0% {
+      background-position: 0;
+    }
+  
+    100% {
+      background-position: 100%;
+    }
+  }
+  
+  .game_layout {
+    width: 1000px;
+    height: 530px;
+    margin: 20px auto;
+  }
+  
+  .land {
+    height: 50px;
+    background: url('../images/bird/land.png');
+  }
+  
+  .bird_box {
+    height: 480px;
+    background: url('../images/bird/sky.png');
+    background-position: center center;
+    position: relative;
+    animation: birdBgMove 4s infinite linear;
+    overflow: hidden;
+  }
+  
+  .bird {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+  }
+  
+  .birdJump {
+    animation: birdJump .3s;
+  
+  }
+  
+  @keyframes birdJump {
+    0% {
+      transform: rotate(30deg);
+    }
+  
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+  .birdRoate {
+    animation: birdRotate 1.3s;
+  }
+  
+  @keyframes birdRotate {
+    0% {
+      transform: rotate(0);
+    }
+  
+    100% {
+      transform: rotate(90deg);
+    }
+  }
+  
+  .birdWing {
+    width: 100%;
+    height: 100%;
+    animation: birdWing .5s infinite;
+  }
+  
+  @keyframes birdWing {
+    0% {
+      background: url('../images/bird/bird2.png') center center;
+      background-size: 195% 195%;
+    }
+  
+    33% {
+      background: url('../images/bird/bird0.png') center center;
+      background-size: 195% 195%;
+    }
+  
+    66% {
+      background: url('../images/bird/bird1.png') center center;
+      background-size: 195% 195%;
+    }
+  
+    100% {
+      background: url('../images/bird/bird2.png') center center;
+      background-size: 195% 195%;
+    }
+  }
+  
+  .pipFar {
+    width: 52px;
+    height: 100%;
+    position: absolute;
+    user-select: none;
+  }
+  
+  .pipe {
+    position: absolute;
+    left: 0;
+    border: 0;
+  }
+  
+  .success_img {
+    border: 0;
+    position: absolute;
+  }
+  
+  .bird_h3 {
+    padding-top: 150px;
+    font-size: 50px;
+    color: rgb(50, 56, 53);
+    line-height: 100px;
+    text-align: center;
+    letter-spacing: 10px;
+  }
+  
+  .scoreTip {
+    text-align: center;
+    padding-top: 10px;
+  }
+  
+  .birdScoreSpan{
+    padding: 10px;
+  }
