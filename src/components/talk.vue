@@ -1,7 +1,7 @@
 <template>
   <div class="talk">
 	<div v-show="loadingShow" class="loader loader7"></div>
-	<audio src="https://dds.dui.ai/runtime/v1/synthesize?voiceId=qianranfa&speed=0.8&volume=100&audioType=wav&text=我是谁" autoplay></audio>
+	<!-- <audio src="https://dds.dui.ai/runtime/v1/synthesize?voiceId=qianranfa&speed=0.8&volume=100&audioType=wav&text=我是谁" autoplay></audio> -->
   </div>
 </template>
 

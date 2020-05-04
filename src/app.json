@@ -1,32 +1,30 @@
 {
-  "pages": [
-    "pages/index/main",
-    "pages/logs/main",
-    "pages/counter/main"
-  ],
+  "pages": ["pages/index/main", "pages/logs/main", "pages/counter/main"],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#222",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "color": "#000000",
-    "backgroundColor": "#fff",
+    "backgroundColor": "#222",
     "selectedColor": "#DD002C",
     "borderStyle": "white",
-
-    "list": [{
-      "text": "brid",
-      "pagePath": "pages/index/main",
-      "iconPath": "static/tabs/home.png",
-      "selectedIconPath": "static/tabs/home-active.png"
-    }, {
-      "text": "fly",
-      "pagePath": "pages/logs/main",
-      "iconPath": "static/tabs/orders.png",
-      "selectedIconPath": "static/tabs/orders-active.png"
-    }],
+    "list": [
+      {
+        "text": "brid",
+        "pagePath": "pages/index/main",
+        "iconPath": "static/tabs/home.png",
+        "selectedIconPath": "static/tabs/home-active.png"
+      },
+      {
+        "text": "fly",
+        "pagePath": "pages/logs/main",
+        "iconPath": "static/tabs/orders.png",
+        "selectedIconPath": "static/tabs/orders-active.png"
+      }
+    ],
     "position": "bottom"
   }
 }
