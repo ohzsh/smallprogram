@@ -1,0 +1,334 @@
+/*
+ * @Author: json
+ * @Date: 2020-06-05 16:40:27
+ * @LastEditTime: 2020-06-22 15:08:56
+ * @LastEditors: json
+ * @Description: 生成公共样式
+ * @FilePath: /smallprogram/src/common/basicstyle.scss
+ */
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+view {
+  line-height: 1.6;
+}
+$list: (
+  l: left,
+  r: right,
+  b: bottom,
+  t: top
+);
+@for $i from -20 through 100 {
+  .pd-#{$i} {
+    padding: $i + upx;
+  }
+  .mg-#{$i} {
+    margin: $i + upx;
+  }
+  @if $i > 0 {
+    /*width([0%-100%] | [0upx-100upx])*/
+    .w-#{$i} {
+      width: $i + upx;
+    }
+    .w-#{$i}p {
+      width: $i * 1%;
+    }
+    /*width height vw vh*/
+    .vw-#{$i} {
+      width: $i + vw;
+    }
+    .vh-#{$i} {
+      height: $i + vh;
+    }
+    /*height([0%-100%] | [0upx-100upx]) && line-height[0upx-100upx]*/
+    .h-#{$i}p {
+      height: $i * 1%;
+    }
+    .h-#{$i} {
+      height: $i + upx;
+    }
+    .lh-#{$i} {
+      line-height: $i + upx;
+    }
+    /*font-size[0upx-100upx])*/
+    .fs-#{$i} {
+      font-size: $i + upx;
+    }
+    /*border-radius([0%-100%] | [0upx-100upx])*/
+    .br-#{$i} {
+      border-radius: $i + upx;
+    }
+    .br-#{$i}p {
+      border-radius: $i * 1%;
+    }
+  }
+  /*透明度*/
+  @if $i >= 0 or $i <= 10 {
+    .o-#{$i}0 {
+      filter: alpha(opacity= $i * 10);
+      opacity: $i * 0.1;
+    }
+  }
+  /* 上 下 左 右 && margin-(上 下 左 右）&& padding-(上 下 左 右）*/
+  @each $key, $usr in $list {
+    .p#{$key}-#{$i} {
+      padding-#{$usr}: $i + upx;
+    }
+    .m#{$key}-#{$i} {
+      margin-#{$usr}: $i + upx;
+    }
+    .#{$key}-#{$i} {
+      #{$usr}: $i + upx;
+    }
+  }
+}
+/* 上 下 左 右 1px 边框*/
+.bn {
+  border: none;
+}
+@each $key, $usr in $list {
+  .b#{$key}-1px {
+    position: relative;
+    &:after {
+      position: absolute;
+      content: "";
+      top: -50%;
+      bottom: -50%;
+      left: -50%;
+      right: -50%;
+      -webkit-transform: scale(0.5);
+      transform: scale(0.5);
+      border-#{$usr}: 1px solid black;
+    }
+  }
+}
+/*字体粗细*/
+.fwn {
+  font-weight: normal;
+}
+.fwb {
+  font-weight: bold;
+}
+.fw200 {
+  font-weight: 200;
+}
+.fw400 {
+  font-weight: 400;
+}
+// 文字对齐
+.tl {
+  text-align: left;
+}
+.tc {
+  text-align: center;
+}
+.tr {
+  text-align: right;
+}
+/* flex  */
+.df {
+  display: flex;
+}
+.jcc {
+  justify-content: center;
+}
+.aic {
+  align-items: center;
+}
+.jcfs {
+  justify-content: flex-start;
+}
+.jcfe {
+  justify-content: flex-end;
+}
+.jcsb {
+  justify-content: space-between;
+}
+.jcsa {
+  justify-content: space-around;
+}
+.aifs {
+  align-items: flex-start;
+}
+.aife {
+  align-items: flex-end;
+}
+.fdr {
+  flex-direction: row;
+}
+.fdc {
+  flex-direction: column;
+}
+.fww {
+  flex-wrap: wrap;
+}
+/*定位*/
+.pr {
+  position: relative;
+}
+.pa {
+  position: absolute;
+}
+.pf {
+  position: fixed;
+}
+/*手势*/
+.hand {
+  cursor: pointer;
+}
+/* 事件穿透 */
+.pe-n {
+  pointer-events: none;
+}
+/* 按钮禁用. */
+.disable {
+  outline: 0 none;
+  cursor: default !important;
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+  -ms-pointer-events: none;
+  pointer-events: none;
+}
+/* 清楚button样式 */
+.clearBtn {
+  background-color: transparent;
+  line-height: 1rpx;
+  border: none;
+  min-height: 0;
+  &::after {
+    border: none;
+  }
+}
+/* 页面置灰 */
+.page-disable {
+  pointer-events: none;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: gray;
+}
