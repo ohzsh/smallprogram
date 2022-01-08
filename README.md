@@ -1,4 +1,4 @@
-# my-small
+# 小程序
 
 ## Project setup
 ```
